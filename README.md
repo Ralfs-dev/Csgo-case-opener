@@ -1,1 +1,0 @@
-# Csgo-case-opener
