@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Your Inventory</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Item</th>
+      <th>Rarity</th>
+      <th>Price</th>
+      <th>Opened At</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for drop in drops %}
+    <tr>
+      <td>{{ drop.id }}</td>
+      <td>{{ drop.item_name }}</td>
+      <td>{{ drop.rarity }}</td>
+      <td>${{ drop.price }}</td>
+      <td>{{ drop.opened_at.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Welcome!</h1>
+  <p>Total cases opened: {{ total }}</p>
+  <a href="{{ url_for('open_case') }}" class="btn btn-primary">Open a Case</a>
+</div>
+{% endblock %}
